@@ -4,11 +4,22 @@ import { CurrencyFlagEditDropDown } from "./CurrencyFlagDropdown";
 import { currency } from "./fixture";
 
 class App extends React.Component {
-  dropdownOnChange1 = (event, id, list) => {
-    const { dropDownChangeCurrency1 } = this.props;
-    if (dropDownChangeCurrency1) {
-      dropDownChangeCurrency1(list);
+  state = {
+    currency,
+    selectedObj: {
+      name: "USD United States Dollar",
+      code: "USD",
+      id: ""
     }
+  };
+  dropdownOnChange1 = (event, id, list) => {
+    const { dropDownChangeCurrency } = this.props;
+    if (dropDownChangeCurrency) {
+      dropDownChangeCurrency(list);
+    }
+    this.setState({
+      selectedObj: list
+    });
   };
   currencyManipulation = props => {
     const { name } = props;
@@ -19,15 +30,15 @@ class App extends React.Component {
     };
   };
   render() {
-    let newCurrencyData = currency.map(this.currencyManipulation);
+    let newCurrencyData = this.state.currency.map(this.currencyManipulation);
     const dropdownAttribute1 = {
       options: newCurrencyData,
       hidePlaceholder: true,
-      selectedValue: "USD United States Dollar",
+      selectedValue: this.state.selectedObj.name,
       onChange: this.dropdownOnChange1,
       enabeleRemoveIcon: true,
-      code: "USD",
-      id: "currency-flag-1"
+      code: this.state.selectedObj.code,
+      id: "currency-flag"
     };
     return (
       <div className="App">
