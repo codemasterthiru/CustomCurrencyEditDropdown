@@ -1,0 +1,232 @@
+.custom-option-text {
+  display: inline-block;
+  line-height: 25px;
+  margin-left: 5px;
+}
+
+.currency-flag {
+  width: 30px;
+  height: 20px;
+}
+
+.custom-edit-dropdown-container .custom-dropdown-list .custom-option-item {
+  display: flex;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.input-currency-flag {
+  width: 30px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.custom-edit-dropdown-container {
+  width: 100%;
+  display: inline-block;
+
+  .cutom-selection-box {
+    box-sizing: border-box;
+  }
+
+  .cutom-selection-box {
+    z-index: 0;
+
+    .cutom-input {
+      // width: 200px;
+    }
+  }
+
+  .remove-text {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    width: 10px;
+    fill: red;
+  }
+}
+
+.custom-dropdown-list {
+  background-color: white;
+  width: 200px;
+  display: inline-block;
+  border: 1px solid gray;
+  left: 3px;
+  position: relative;
+  top: 0px;
+}
+
+.chain-icon {
+  fill: red;
+  padding: 0px 10px;
+  width: 40px;
+  height: 31px;
+}
+
+.value-button {
+  background: white;
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 3px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.currency-table-container {
+  margin-top: 20px;
+
+  .group-item {
+    display: flex;
+    margin-bottom: 20px;
+
+    .molecules-custom-dropdown-container {
+      width: 120px;
+      margin: 0px 10px;
+      cursor: pointer;
+
+      .custom-dropdown-list {
+        background-color: white;
+      }
+    }
+
+    .view-text {
+      line-height: 32px;
+    }
+  }
+
+  .label-dropdown {
+    font-size: 14px;
+
+    span {
+      margin-right: 20px;
+    }
+
+    .select-dropdown {
+      padding: 7px 25px 7px 10px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+  }
+
+  .edit-icon {
+    margin-left: 10px;
+  }
+
+  .currency-excel-export-icon {
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .currency-edit-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    &:hover {
+      fill: red;
+    }
+  }
+}
+
+.custom-edit-dropdown-container {
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .custom-Text-field {
+        padding: 8px 0px;
+        font-size: 14px;
+    }
+
+    .cutom-selection-box {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        padding-left: 5px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        background-color: white;
+
+        .cutom-input {
+            outline: none;
+            width: 90%;
+            border: none;
+        }
+
+        .custom-down-arrow {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            fill: gray;
+
+            &:hover {
+                fill: red;
+            }
+        }
+    }
+
+    .custom-dropdown-list {
+        position: absolute;
+        z-index: 3;
+        width: 99%;
+        // max-height: 200px;
+        margin-top: 2px;
+        overflow-y: auto;
+        border-radius: 5px;
+        border: 1px solid gray;
+        background-color: white;
+        top: 37px;
+        scrollbar-width: thin;
+
+        :hover {
+            background-color: red;
+            color: white;
+
+            .option-highlight {
+                background-color: red !important;
+                color: white !important;
+                font-weight: bold;
+            }
+        }
+
+        .active {
+            background-color: red;
+            color: white;
+
+            .option-highlight {
+                background-color: red !important;
+                color: white !important;
+                font-weight: bold;
+            }
+        }
+
+        .custom-option-item {
+            padding: 7px;
+            cursor: pointer;
+
+            .option-highlight {
+                color: red;
+                background-color: white;
+            }
+        }
+    }
+
+    .custom-edit-dropdown-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
